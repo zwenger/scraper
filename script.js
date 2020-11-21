@@ -32,9 +32,8 @@ setInterval(() => {
         console.log('Email sent');
       }
     });
-
   })
-}, 10000)
+}, 600000)
 
 
 let transporter = nodemailer.createTransport({
