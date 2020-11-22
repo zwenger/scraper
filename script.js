@@ -33,7 +33,7 @@ setInterval(() => {
       }
     });
   })
-}, 600000)
+}, 10000)
 
 
 let transporter = nodemailer.createTransport({
