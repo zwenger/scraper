@@ -26,19 +26,25 @@ setInterval(() => {
       }
     }
   }, (err, {data}) => {
-    transporter.sendMail(mailOptions, (err, data) => {
-      if (err) {
-        console.log('error: ' + err);
-      } else {
-        console.log('Email sent');
-      }
-    });
+
+    let productsWithStock = data.products.filter(product => product.stock);
+    if(productsWithStock) {
+      transporter.sendMail(mailOptions, (err, data) => {
+        if (err) {
+          console.log('error: ' + err);
+        } else {
+          console.log('Email sent');
+        }
+      });
+    }
   })
 }, 10000)
 
 
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+  service: 'gmail',
+  port: 465,
+  secure: true,
     auth:{
         user: 'elmailrancio@gmail.com',
         pass: 'asdfg654321'
