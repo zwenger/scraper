@@ -5,7 +5,7 @@ import nodemailer from 'nodemailer';
 const url = 'https://compragamer.com/index.php?criterio=rtx%203080&seccion=3&nro_max=50';
 
 setInterval(() => {
-  scrapeIt('https://compragamer.com/index.php?seccion=3&cate=6&nro_max=50', {
+  scrapeIt(url, {
     products: {
       listItem: ".products__item"
       , data: {
@@ -38,10 +38,10 @@ setInterval(() => {
 
 
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'hotmail',
     auth:{
-        user: 'elmailrancio@gmail.com',
-        pass: 'asdfg654321'
+        user: 'zwengertest99@hotmail.com',
+        pass: 'asd654321'
     }
 });
 
@@ -51,11 +51,3 @@ let mailOptions = {
     subject: 'RTX 3080',
     text: 'Hay stock padre !'
 };
-//
-// transporter.sendMail(mailOptions, (err, data) => {
-//     if (err){
-//         console.log('error: ' + err);
-//     } else {
-//         console.log('Email sent');
-//     }
-// });
