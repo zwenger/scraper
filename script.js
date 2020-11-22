@@ -38,15 +38,15 @@ setInterval(() => {
 
 
 let transporter = nodemailer.createTransport({
-    service: 'hotmail',
+    service: 'gmail',
     auth:{
-        user: 'zwengertest99@hotmail.com',
-        pass: 'asd654321'
+        user: 'elmailrancio@gmail.com',
+        pass: 'asdfg654321'
     }
 });
 
 let mailOptions = {
-    from: 'zwengertest99@hotmail.com',
+    from: 'elmailrancio@gmail.com',
     to: 'ritortoalvaro93@gmail.com',
     subject: 'RTX 3080',
     text: 'Hay stock padre !'
