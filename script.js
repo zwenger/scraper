@@ -28,7 +28,8 @@ setInterval(() => {
   }, (err, {data}) => {
 
     let productsWithStock = data.products.filter(product => product.stock);
-    if(productsWithStock) {
+    console.log(productsWithStock)
+    if(productsWithStock.length !== 0) {
       transporter.sendMail(mailOptions, (err, data) => {
         if (err) {
           console.log('error: ' + err);
@@ -38,7 +39,7 @@ setInterval(() => {
       });
     }
   })
-}, 10000)
+}, 1200000)
 
 
 let transporter = nodemailer.createTransport({
