@@ -1,6 +1,7 @@
 import scrapeIt from "scrape-it";
 import nodemailer from 'nodemailer';
 
+
 const url = 'https://compragamer.com/index.php?criterio=rtx%203080&seccion=3&nro_max=50';
 
 setInterval(() => {
@@ -39,13 +40,13 @@ setInterval(() => {
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth:{
-        user: 'ritortoalvaro93@gmail.com',
-        pass: '37497680cuentagmail'
+        user: 'elmailrancio@gmail.com',
+        pass: 'asdfg654321'
     }
 });
 
 let mailOptions = {
-    from: 'ritortoalvaro93@gmail.com',
+    from: 'no-reply@yourdomain.com',
     to: 'ritortoalvaro93@gmail.com',
     subject: 'RTX 3080',
     text: 'Hay stock padre !'
