@@ -46,7 +46,7 @@ let transporter = nodemailer.createTransport({
 });
 
 let mailOptions = {
-    from: 'no-reply@yourdomain.com',
+    from: 'zwengertest99@hotmail.com',
     to: 'ritortoalvaro93@gmail.com',
     subject: 'RTX 3080',
     text: 'Hay stock padre !'
